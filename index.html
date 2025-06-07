@@ -6,26 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BOTÃO</title>
     <style>
-    h1{
-    color: red;
-    }
+        h1 {
+            color: red;
+        }
     </style>
 </head>
 
 <body>
     <h1>Contadores</h1>
-    <button onclick="add()">0</button>
+    <button  onclick="add(1)">0</button>
+    <button  onclick="add(2)">0</button>
 
     <script>
-        var numero = 0;
+        var numero1 = 0;
+        var numero2 = 0;
 
-        function add() {
-            numero++;
-            render();
+        function add(qual) {
+            if (qual === 1) {
+            numero1++;
+            } else if (qual === 2) {
+                numero2++;
+            } 
         }
-        function render() {
-            document.querySelector("button").innerText =  "total  " + numero;
+        function render(qual) {
+            if (qual === 1) {
+                document.querySelector().innerText = " TOTAL: " = numero1;
+            } else if (qual === 2) {
+                document.querySelector().innerText = " TOTAL: " = numero2;
+            
         }
+    }
         render();
     </script>
 </body>
